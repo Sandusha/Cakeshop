@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cake Shop</title>
+<link rel="stylesheet" type="text/css" href="CSS/StyleMain.css"/>
+<style type= "text/css">
+h2
+{font-family: Georgia, "Times New Roman", Times, serif ;
+font-size:30px;
+color:#EEE;}
+p{
+	font-size: 30px;
+	color:#EEE;
+	}
+H3{font-size:40px;}	
+
+
+</style>
+</head>
+<body>
+<header>
+<div class="main">
+<div class="logo">
+<img src="Img/logo.png" />
+<ul>
+<li><a href="Main.html">Home</a></li>
+<li><a href="Order.html">Order</a></li>
+<li><a href="Menu.html">Menu</a></li>
+<li class="active"><a href="News.html">News & Offers</a></li>
+<li><a href="ContactUS.html">Contact Us</a></li>
+<li><a href="About us.html">About Us</a></li></ul>
+</ul>
+</div>
+<h2>
+<br />
+<br />
+<br />
+<br />
+This month offers </h2>
+<div class="slideshow-container">
+<div class="mySlides fade">
+ <img src="Img/offer (3).jpg" style="width:100%">
+  <div class="text"> New Aurudu Cake for Sinhala & Tamil New Year </div>
+</div>
+
+<div class="mySlides fade">
+<img src="Img/offer (1).jpg"  style="width:100%">
+  <div class="text">New Aurudu Cake for Sinhala & Tamil New Year</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="Img/offer (2).jpg" style="width:100%">
+  <div class="text">New Year Cake</div>
+</div>
+
+</br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+    <br>
+      <h2>New Year Special!!</h2><br><br>
+      <p >
+      Introducing New Year cakes for upcoming 
+<br>Sinhala & Tamil new year festival.<br>
+Decorate your new year food table with<br> our all new designed Fanny's new year cakes.<br></p>
+
+<br>
+<br>
+<H3>20% discount for the first 20 Orders!!</H3>
+      </p>
+    </div>
+    <div class="flip-box-back">
+      <br>
+      <h2>News</h2><br><br>
+      <p >
+      We are planning to open a new 
+<br>branch at Union Place Colombo.<br><br>
+Give away for the next month will be <br>begin from the first week of April.<br>
+For more information visit our instagram page<br></p>
+<H1 class="offer">
+<br>
+Visit the gallery for our new cake designs</H1>
+      </p>
+    </div>
+  </div>
+</div> 
+
+</div>
+</header>
+  <div class="footer">
+    Fanny's Cakes.Powered by Sdusha.All Rights Reserved.
+  </div>
+</div>
+<body>
+</body>
+</html>

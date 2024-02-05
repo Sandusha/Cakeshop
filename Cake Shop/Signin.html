@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cake Shop</title>
+<link rel="stylesheet" type="text/css" href="CSS/StyleMain.css"/>
+<script type="text/javascript">
+
+function validate_form( )
+{
+var valid = true;
+var x=document.signin.Email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");
+		var p=document.signin.password.value; 
+	
+if( document.signin.Email.value == "" )
+                  {
+                    alert ( "Please enter Email");
+					document.signin.Email.focus();
+                    valid = false;
+        }
+		else            
+              		 if  (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+					 {  
+                       alert("Please enter a valid e-mail address");  
+                        valid = false;
+                  	}
+		else            
+               if  ( document.signin.password.value == "" )
+                  {
+                    alert ( "Please enter password");
+					document.signin.password.focus();
+                    valid = false;
+                  }
+				   
+		 
+		      
+
+return valid;
+}
+
+</script>
+</head>
+<body>
+<header>
+<div class="main">
+<div class="logo">
+<img src="Img/logo.png" />
+<ul>
+<li><a href="Main.html">Home</a></li>
+<li><a href="Order.html">Order</a></li>
+<li><a href="Menu.html">Menu</a></li>
+<li><a href="News.html">News & Offers</a></li>
+<li><a href="ContactUS.html">Contact Us</a></li>
+<li><a href="About us.html">About Us</a></li>
+</ul>
+</div>
+
+<form  name='signin' class="wrapper" method="post" 
+onSubmit="return validate_form();">
+
+<div class="signin">
+<div class="title">Sign In</div>
+  <div class="input-fields">
+  <div class="items">
+ 
+ <div class="items">
+  <label for="Email" class="label">Email:</label>
+<input  id="Email" type="text"  class="input" name="Email" >
+</div>
+ 
+ <div class="items">
+  <label for="Password" class="label">Password:</label>
+<input id="password" type="text" class="input" name="password"  >
+</div>
+
+
+<input type="submit" class="btn" name="submit" value="Sign In" />
+  </form>
+
+
+
+</div>
+</header>
+  <div class="footer">
+    Fanny's Cakes.Powered by Sdusha.All Rights Reserved.
+  </div>
+</div>
+<body>
+</body>
+</html>

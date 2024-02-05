@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cake Shop</title>
+<link rel="stylesheet" type="text/css" href="CSS/StyleMain.css"/>
+<script type="text/javascript">
+
+function validate_form( )
+{
+var valid = true;
+var x=document.login.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");
+	var p=document.login.password.value; 
+	var cp=document.login.ConfirmPassword.value; 
+	
+if( document.login.fname.value == "" )
+                  {
+                    alert ( "Please fill name field");
+					document.login.fname.focus();
+                    valid = false;
+        }
+		else            
+               if  ( document.login.lname.value == "" )
+                  {
+                    alert ( "Please fill name field");
+					document.login.lname.focus();
+                    valid = false;
+                  } 
+				   else            
+        if (!/^[a-zA-Z]+$/g.test(document.login.fname.value)) {
+        alert("Invalid characters.Enter letters only");
+        document.login.fname.focus();
+        valid = false; }
+		
+				   else            
+        if (!/^[a-zA-Z]+$/g.test(document.login.lname.value)) {
+        alert("Invalid characters.Enter letters only");
+        document.login.lname.focus();
+        valid = false; }
+		
+				  else            
+               if  ( document.login.email.value == "" )
+                  {
+                    alert ( "Please enter your Email");
+					document.login.email.focus();
+                    valid = false;
+                  } 
+				else            
+              		 if  (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+					 {  
+                       alert("Please enter a valid e-mail address");  
+                        valid = false;
+                  	}
+				  
+				  else            
+               if  ( document.login.password.value == "" )
+                  {
+                    alert ( "Please enter password");
+					document.login.password.focus();
+                    valid = false;
+                  } 
+				  	  else            
+               if  ( document.login.ConfirmPassword.value == "" )
+                  {
+                    alert ( "Please enter confirm password");
+					document.login.ConfirmPassword.focus();
+                    valid = false;
+                  }
+				  else
+				   if  ( p!=cp )
+                  {
+                    alert ( "Password & confirm Password don't match");
+					document.login.ConfirmPassword.focus();
+                    valid = false;
+                  }
+				  else
+				   if  ( p.length < 7)
+                  {
+                    alert ( "Password must be longer than 6 characters");
+					document.login.Password.focus();
+                    valid = false;
+                  }
+
+
+return valid;
+}
+
+</script>
+</head>
+<body>
+<header>
+<div class="main">
+<div class="logo">
+<img src="Img/logo.png" />
+<ul>
+<li><a href="Main.html">Home</a></li>
+<li><a href="Order.html">Order</a></li>
+<li><a href="Menu.html">Menu</a></li>
+<li><a href="News.html">News & Offers</a></li>
+<li><a href="ContactUS.html">Contact Us</a></li>
+<li><a href="About us.html">About Us</a></li>
+</ul>
+</div>
+
+<form  name='login' class="wrapper" method="post" 
+onSubmit="return validate_form();">
+
+<div class="login">
+<div class="title">Sign Up</div>
+  <div class="input-fields">
+  <div class="items">
+ 
+ <div class="items">
+  <label for="firstname" class="label">First Name:</label>
+<input  id="fname" type="text"  class="input" name="fname" >
+</div>
+ 
+  <div class="items">
+  <label for="last name" class="label">Last Name:</label>
+<input  id="lname" type="text"  class="input" name="lname" >
+</div>
+
+<div class="items">
+<label for="email" class="label">Email:</label>
+<input id="email" type="text" class="input" name="email"   ></div>
+
+  <div class="items">
+  <label for="Password" class="label">Password:</label>
+<input id="password" type="text" class="input" name="password"  >
+</div>
+
+  <div class="items">
+  <label for="ConfirmPassword" class="label">Confirm Password:</label>
+<input id="ConfirmPassword" type="text" class="input" name="ConfirmPassword" >
+</div>
+
+<input type="submit" class="btn" name="submit" value="Sign Up" />
+  </form>
+
+
+
+</div>
+</header>
+  <div class="footer">
+    Fanny's Cakes.Powered by Sdusha.All Rights Reserved.
+  </div>
+</div>
+<body>
+</body>
+</html>

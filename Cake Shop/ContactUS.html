@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cake Shop</title>
+<link rel="stylesheet" type="text/css" href="CSS/StyleMain.css"/>
+<style type= "text/css">
+.sendbtn
+{ background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:12px 10px;
+  text-align:center;
+	font-weight:bold;
+	border-radius:7px;
+	margin:10px 0px;
+  margin-bottom: 10px;}
+  
+.sendbtn:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+</style>
+
+<script type="text/javascript">
+
+function validate_form( )
+{
+var valid = true;
+var x=document.Send.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");
+	
+	if( document.Send.Name.value == "" )
+                  {
+                    alert ( "Please fill name field");
+					document.Send.Name.focus();
+                    valid = false;
+					}
+					
+			 else            
+               if  ( document.Send.email.value == "" )
+                  {
+                    alert ( "Please enter your Email");
+					document.Send.email.focus();
+                    valid = false;
+                  } 
+				  
+				   else            
+              		 if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+					 {  
+                       alert("Please enter a valid e-mail address");  
+                        valid = false;
+                  	}
+					
+					else            
+              		 if ( document.Send.messege.value == "" )
+                  		{
+                    alert ( "Please enter messege");
+					document.Send.messege.focus();
+                    valid = false;
+					}
+return valid;
+}
+</script>
+
+</head>
+<body>
+<header>
+<div class="main">
+<div class="logo">
+<img src="Img/logo.png" />
+<ul>
+<li><a href="Main.html">Home</a></li>
+<li><a href="Order.html">Order</a></li>
+<li><a href="Menu.html">Menu</a></li>
+<li><a href="News.html">News & Offers</a></li>
+<li class="active"><a href="ContactUS.html">Contact Us</a></li>
+<li><a href="About us.html">About Us</a></li>
+</ul>
+</div>
+<form  name='Send' class="wrapper" method="post" 
+onSubmit="return validate_form();">
+
+<div class="tbl_bg">
+<div class="title">Contact Us</div>
+  <div class="input-fields">
+  <div class="items">
+  <div class="items">
+  <label for="Name" class="label">Name:</label>
+<input  id="Name" type="text"  class="input" name="Name" >
+</div>
+ 
+<div class="items">
+<label for="email" class="label">Email:</label>
+<input id="email" type="text" class="input" name="email"   ></div>
+
+<div class="items">
+  <label for="messege" class="label">Messege:</label>
+<textarea id="messege" type="text" class="text-area" name="messege"  >
+</textarea>
+
+
+<input type="submit" class="sendbtn" name="submit" value="Send" />
+
+<br>
+<br>
+
+<div class="label">
+  <h1>About Us</h1><p>&nbsp;</p><p>Fanny’s Cake,7th lane.
+   Colombo 3.</p><p>TP: (011) 2820917</p>
+  <p>Email: Fanny’s Cake@gmail.com</p>
+  <a href="https://www.facebook.com/Fanny's Cakes.net"><img border="0.5" src="Img/fb.jpg" width="35" height="35"></a>
+   <a href="https://www.instagram.com/fannyscakesn/"><img border="0.5" src="Img/insta.png" width="35" height="35"></a>
+</div>
+  </form>
+</header>
+  <div class="footer">
+    Fanny's Cakes.Powered by Sdusha.All Rights Reserved.
+  </div>
+</div>
+<body>
+</body>
+</html>
